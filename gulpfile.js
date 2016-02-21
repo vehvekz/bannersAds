@@ -24,7 +24,7 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/300x600/"
+		baseDir: "dist/300x1050/"
 	},
 	tunnel: true,
 	host: 'localhost',
@@ -74,8 +74,14 @@ gulp.task('image', function () {
 		.pipe(reload({stream: true}));
 });
 
+// Clean task
+gulp.task('clean', function () {
+	return del(path.dist);
+});
+
 // Developer task 
 gulp.task('dev', [
+	'clean',
 	'html',
 	'image',
 	'style'
@@ -94,16 +100,10 @@ gulp.task('watch', function () {
 	}));
 });
 
-// Clean task
-gulp.task('clean', function () {
-	return del(path.dist);
-});
-
 // Webserver with livereload
 gulp.task('webserver', function () {
 	browserSync(config);
 });
-
 
 // Default task
 gulp.task('default', ['dev', 'webserver', 'watch']);
