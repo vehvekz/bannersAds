@@ -24,7 +24,7 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/300x1050/"
+		baseDir: "dist/468x60/"
 	},
 	tunnel: true,
 	host: 'localhost',
@@ -81,7 +81,6 @@ gulp.task('clean', function () {
 
 // Developer task 
 gulp.task('dev', [
-	'clean',
 	'html',
 	'image',
 	'style'

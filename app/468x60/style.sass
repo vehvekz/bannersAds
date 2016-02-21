@@ -1,0 +1,223 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #65bd60
+
+/********** Main Style **********/
+*
+	box-sizing: border-box
+body
+	font-family: 'Roboto', sans-serif
+	color: $black
+	font-size: 14px
+.banner
+	position: relative
+	width: 468px
+	height: 60px
+	overflow: hidden
+	-webkit-font-smoothing: antialised
+	background-color: #f1f1f1
+
+/********** Title text **********/
+.title-wrap
+	font-family: 'Roboto Condensed', sans-serif
+	text-transform: uppercase
+	height: 100%
+	background: url("img/bg1.png") no-repeat center
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-left: 137px
+	&_text1
+		visibility: hidden
+		font-size: 21px
+		letter-spacing: -2px
+		line-height: 21px
+		padding-top: 7px
+	&_text2
+		visibility: hidden
+		font-size: 26px
+		letter-spacing: -1px
+		line-height: 26px
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-left: 137px
+	&_text1
+		visibility: hidden
+		font-size: 21px
+		letter-spacing: -1px
+		line-height: 21px
+		padding-top: 7px
+	&_text2
+		visibility: hidden
+		font-size: 26px
+		letter-spacing: -1px
+		line-height: 26px
+
+/********** Date **********/
+.info-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+.deadline-wrap
+	position: absolute
+	top: 0
+	left: 0
+	width: 291px
+	height: 60px
+	padding-left: 14px
+	width: 414px
+	height: 60px
+	background: url("img/info-bg1.png") no-repeat center
+.deadline
+	color: $white
+	font-size: 17px
+	padding: 7px 0 0
+	letter-spacing: 0
+	line-height: 17px
+.date
+	font-size: 29px
+	line-height: 31px
+	letter-spacing: -2px
+
+/********** Logos **********/
+.logos
+	position: absolute
+	top: 0
+	right: 0
+	width: 299px
+	height: 60px
+	background: url("img/info-bg2.png") no-repeat center
+	padding-left: 205px
+	img
+		display: inline-block
+		&.logo1
+			width: 60px
+			margin-top: 6px
+		&.logo2
+			margin: 2px 0 0 3px
+			width: 90px
+
+/********** Elements **********/
+.triangle2
+	position: absolute
+	width: 41px
+	height: 28px
+	top: 42px
+	background: url("img/triangle2.png") no-repeat center
+.triangle3
+	position: absolute
+	width: 30px
+	height: 20px
+	background: url("img/triangle3.png") no-repeat center
+.bg2
+	position: absolute
+	bottom: 0
+	right: 20px
+	width: 131px
+	height: 48px
+	background: url("img/bg2.png") no-repeat center
+
+/********** Animation **********/
+@keyframes slideDown
+	0%
+		transform: translateY(-115%)
+		visibility: visible
+	20%
+		transform: translateY(0)
+	80%
+		transform: translateY(0)
+	100%
+		transform: translateY(-115%)
+
+@keyframes slideUp
+	0%
+		transform: translateY(115%)
+		visibility: visible
+	20%
+		transform: translateY(0)
+	80%
+		transform: translateY(0)
+	100%
+		transform: translateY(115%)
+
+@keyframes bg2
+	from
+		bottom: -40px
+	to
+		bottom: 0px
+
+@keyframes slideLeft
+	from
+		transform: translateX(100%)
+	to
+		transform: translateX(0)
+@keyframes slideRight
+	from
+		transform: translateX(-100%)
+	to
+		transform: translateX(0)
+
+.title1_text1
+	animation: slideDown 3s ease-in-out .1s
+	animation-fill-mode: both
+.title1_text2
+	animation: slideUp 3s ease-in-out .1s
+	animation-fill-mode: both
+
+.title2_text1
+	animation: slideDown 3s ease-in-out 3s
+	animation-fill-mode: both
+.title2_text2
+	animation: slideUp 3s ease-in-out 3s
+	animation-fill-mode: both
+.bg2
+	animation: bg2 2s ease 3s
+	animation-fill-mode: both
+
+.deadline-wrap
+	animation: slideRight 1s ease-in-out 6s
+	animation-fill-mode: both
+.logos
+	animation: slideLeft 1s ease-in-out 6s
+	animation-fill-mode: both
+
+@keyframes triangle2
+	from
+		left: 70px
+		transform: rotate(0deg)
+	to
+		left: 90px
+		transform: rotate(40deg)
+@keyframes triangle3
+	0%
+		bottom: 30px
+		right: 30px
+	50%
+		right: 10px
+	100%
+		bottom: 50px
+		right: 20px
+		transform: rotate3d(-1, 10, -2, 180deg)
+
+.triangle2
+	animation: triangle2 6s linear
+	animation-fill-mode: both
+.triangle3
+	animation: triangle3 6s linear
+	animation-fill-mode: both
+
+
+
+
+
+
