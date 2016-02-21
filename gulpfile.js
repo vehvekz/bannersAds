@@ -24,7 +24,7 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/468x60/"
+		baseDir: "dist/728x90/"
 	},
 	tunnel: true,
 	host: 'localhost',
@@ -63,8 +63,8 @@ gulp.task('style', function () {
 gulp.task('image', function () {
 	gulp.src(path.app.img)
 		.pipe($.plumber())
-		.pipe($.newer(path.app.img))
-		.pipe($.imagemin({ 
+		.pipe($.newer(path.dist))
+		.pipe($.imagemin({
 			progressive: true,
 			svgoPlugins: [{removeViewBox: false}],
 			use: [pngquant()],
