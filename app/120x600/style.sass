@@ -1,0 +1,339 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #65bd60
+$bg: #f3f3f3
+$duration: 8s // animation duration
+
+/********** Main Style **********/
+*
+	box-sizing: border-box
+.banner
+	display: block
+	width: 120px
+	height: 600px
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialised
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+.content
+	height: 487px
+	background: $bg url("img/top-bg.png") no-repeat center 0px
+	font-weight: bold
+	position: relative
+	overflow: hidden
+
+/********** Title text **********/
+.title-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	font-family: 'Roboto Condensed', sans-serif
+	height: 487px
+	width: 120px
+	padding: 83px 4px 0
+	background: url("img/bottom-bg.png") no-repeat center 250px
+	text-transform: uppercase
+.title1
+	&_text1
+		font-size: 22px
+		letter-spacing: -2px
+		line-height: 29px
+	&_text2
+		font-size: 18px
+		letter-spacing: -2px
+		line-height: 18px
+.title2
+	color: $accent
+	&_text1
+		font-size: 26px
+		letter-spacing: -2px
+		line-height: 34px
+	&_text2
+		font-size: 24px
+		letter-spacing: -1px
+		line-height: 25px
+.title3
+	padding-top: 115px
+	color: $white
+	font-family: 'Roboto', sans-serif
+	&_text1
+		font-size: 17px
+		letter-spacing: -1px
+		line-height: 20px
+	&_text2
+		font-size: 20px
+		letter-spacing: -1px
+		line-height: 23px
+	&_text3
+		font-size: 14px
+		letter-spacing: -1px
+		line-height: 17px
+
+/********** Date **********/
+.info-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: url("img/info-bg.png") no-repeat center -50px
+	text-align: center
+	padding-top: 209px
+.deadline
+	color: $white
+	font-size: 19px
+	padding: 5px 0
+	letter-spacing: 1px
+	line-height: 18px
+	text-transform: none
+.date
+	font-size: 29px
+	margin-top: 19px
+	letter-spacing: -2px
+	line-height: 25px
+.year
+	font-size: 43px
+	letter-spacing: -3px
+.button
+	display: inline-block
+	text-decoration: none
+	text-transform: uppercase
+	color: inherit
+	padding: 6px 18px
+	margin-top: 12px
+	font-family: 'Roboto Condensed', sans-serif
+	font-size: 16px
+	letter-spacing: -1px
+	border: 3px solid $black
+	transition: all .5s ease
+
+/********** Triangles **********/
+.triangle1
+	position: absolute
+	width: 40px
+	height: 25px
+	top: 148px
+	left: -15%
+	background: url("img/triangle1.png") no-repeat center
+.triangle2
+	position: absolute
+	width: 41px
+	height: 28px
+	top: 70px
+	background: url("img/triangle2.png") no-repeat center
+.triangle3
+	position: absolute
+	width: 30px
+	height: 20px
+	background: url("img/triangle3.png") no-repeat center
+
+/********** Logos **********/
+.logos
+	padding: 16px 0
+	img
+		display: block
+		margin: 0 auto
+		&.logo1
+			width: 91px
+			margin-bottom: 16px
+			margin-right: 20px
+		&.logo2
+			width: 106px
+
+/********** Animation **********/
+@keyframes title1
+	0%
+		transform: translate(0px, -100px)
+		visibility: hidden
+	10%
+		transform: translate(0px, 0px)
+		visibility: visible
+	50%
+		transform: translate(0px, 0px)
+		visibility: visible
+	60%
+		transform: translate(200px, 0px)
+	100%
+		transform: translate(200px, 0px)
+
+@keyframes title2
+	0%
+		transform: translateX(120%)
+		visibility: hidden
+	5%
+		transform: translateX(120%)
+		visibility: hidden
+	15%
+		transform: translateX(0)
+		visibility: visible
+	50%
+		transform: translateX(0)
+		visibility: visible
+	60%
+		transform: translateX(-120%)
+		visibility: hidden
+	100%
+		visibility: hidden
+		transform: translateX(-120%)
+
+@keyframes title3
+	0%
+		transform: translateX(-120%)
+		visibility: hidden
+	10%
+		transform: translateX(-120%)
+		visibility: hidden
+	20%
+		transform: translateX(0)
+		visibility: visible
+	50%
+		transform: translateX(0)
+		visibility: visible
+	60%
+		transform: translateX(120%)
+		visibility: hidden
+	100%
+		transform: translateX(120%)
+		visibility: hidden
+
+@keyframes deadline
+	0%
+		transform: translate(-200px, 0)
+		visibility: hidden
+	55%
+		transform: translate(-200px, 0)
+		visibility: hidden
+	65%
+		transform: translate(0, 0)
+		visibility: visible
+	90%
+		transform: translate(0, 0)
+		visibility: visible
+	100%
+		transform: translate(-200px, 0)
+		visibility: hidden
+
+@keyframes button
+	0%
+		transform: translate(0, 200px)
+		visibility: hidden
+	55%
+		transform: translate(0, 200px)
+		visibility: hidden
+	65%
+		transform: translate(0, 0)
+		visibility: visible
+	90%
+		transform: translate(0, 0)
+		visibility: visible
+	100%
+		transform: translate(200px, 0)
+		visibility: hidden
+
+@keyframes bg1
+	0%
+		background-position: center 250px
+	50%
+		background-position: center 250px
+	60%
+		background-position: center 56px
+	90%
+		background-position: center 56px
+	100%
+		background-position: center 250px
+@keyframes bg2
+	0%
+		background-position: center -50px
+	50%
+		background-position: center -50px
+	60%
+		background-position: center 0px
+	90%
+		background-position: center 0px
+	100%
+		background-position: center -50px
+@keyframes bg3
+	0%
+		background-position: center 0px
+	50%
+		background-position: center 0px
+	60%
+		background-position: center -65px
+	90%
+		background-position: center -65px
+	100%
+		background-position: center 0px
+
+.title1
+	animation: title1 $duration ease infinite
+	animation-fill-mode: both
+.title2
+	animation: title2 $duration ease infinite
+	animation-fill-mode: both
+.title3
+	animation: title3 $duration ease infinite
+	animation-fill-mode: both
+
+.deadline-wrap
+	animation: deadline $duration ease infinite
+	animation-fill-mode: both
+.button
+	animation: button $duration ease infinite
+	animation-fill-mode: both
+.title-wrap
+	animation: bg1 $duration ease infinite
+	animation-fill-mode: both
+.info-wrap
+	animation: bg2 $duration ease infinite
+	animation-fill-mode: both
+.content
+	animation: bg3 $duration ease infinite
+	animation-fill-mode: both
+
+@keyframes triangle1
+	from
+		top: 34%
+	to
+		top: 24%
+@keyframes triangle2
+	from
+		left: 20px
+		transform: rotate(0deg)
+	to
+		left: 50px
+		transform: rotate(35deg)
+@keyframes triangle3
+	0%
+		top: 110px
+		right: 30px
+	50%
+		right: -5px
+	100%
+		top: 65px
+		right: 10px
+		transform: rotate3d(-1, 10, -2, 180deg)
+
+.triangle1
+	animation: triangle1 $duration linear alternate infinite
+	animation-fill-mode: both
+.triangle2
+	animation: triangle2 $duration linear alternate infinite
+	animation-fill-mode: both
+.triangle3
+	animation: triangle3 $duration linear alternate infinite
+	animation-fill-mode: both
+
+
+
+
+
+
