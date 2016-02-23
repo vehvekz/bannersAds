@@ -11,16 +11,26 @@ body
 	color: $black
 	font-size: 14px
 .banner
+	display: block
 	width: 300px
 	height: 1050px
-	overflow: hidden
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	color: $black
+	text-decoration: none
+	outline:none
 	-webkit-font-smoothing: antialised
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
 .content
 	height: 880px
 	background-color: #f3f3f3
 	background: url("img/top-bg.png") no-repeat top center, url("img/bottom-bg.png") no-repeat bottom center
 	font-weight: bold
 	position: relative
+	overflow: hidden
 
 /********** Title text **********/
 .title-wrap
@@ -125,53 +135,110 @@ body
 			margin-top: 20px
 
 /********** Animation **********/
-@keyframes slideDown
-	from
-		transform: translateY(-100%)
+@keyframes title1
+	0%
+		transform: translate(0px, -100px)
 		visibility: hidden
-	to
-		transform: translateY(0)
+	10%
+		transform: translate(0px, 0px)
 		visibility: visible
-
-@keyframes slideUp
-	from
-		transform: translateY(100%)
-		visibility: hidden
-	to
-		transform: translateY(0)
+	85%
+		transform: translate(0px, 0px)
 		visibility: visible
+	95%
+		transform: translate(400px, 0px)
+	100%
+		transform: translate(400px, 0px)
 
-@keyframes slideLeft
-	from
-		transform: translateX(100%)
+@keyframes title2
+	0%
+		transform: translateX(120%)
 		visibility: hidden
-	to
+	10%
+		transform: translateX(120%)
+		visibility: hidden
+	20%
 		transform: translateX(0)
 		visibility: visible
-
-@keyframes slideRight
-	from
-		transform: translateX(-100%)
-		visibility: hidden
-	to
+	85%
 		transform: translateX(0)
 		visibility: visible
+	95%
+		transform: translateX(-120%)
+		visibility: hidden
+	100%
+		visibility: hidden
+		transform: translateX(-120%)
+
+@keyframes title3
+	0%
+		transform: translateX(-120%)
+		visibility: hidden
+	20%
+		transform: translateX(-120%)
+		visibility: hidden
+	30%
+		transform: translateX(0)
+		visibility: visible
+	85%
+		transform: translateX(0)
+		visibility: visible
+	95%
+		transform: translateX(120%)
+		visibility: hidden
+	100%
+		transform: translateX(120%)
+		visibility: hidden
+
+@keyframes deadline
+	0%
+		transform: translate(0, -100px)
+		visibility: hidden
+	30%
+		transform: translate(0, -100px)
+		visibility: hidden
+	40%
+		transform: translate(0, 0)
+		visibility: visible
+	90%
+		transform: translate(0, 0)
+		visibility: visible
+	100%
+		transform: translate(-400px, 0)
+		visibility: hidden
+
+@keyframes button
+	0%
+		transform: translate(0, 100px)
+		visibility: hidden
+	30%
+		transform: translate(0, 100px)
+		visibility: hidden
+	40%
+		transform: translate(0, 0)
+		visibility: visible
+	90%
+		transform: translate(0, 0)
+		visibility: visible
+	100%
+		transform: translate(400px, 0)
+		visibility: hidden
 
 .title1
-	animation: slideDown 1s ease .1s
+	animation: title1 6s ease infinite
 	animation-fill-mode: both
 .title2
-	animation: slideLeft 1s ease 1s
+	animation: title2 6s ease infinite
 	animation-fill-mode: both
 .title3
-	animation: slideRight 1s ease 2s
+	animation: title3 6s ease infinite
 	animation-fill-mode: both
 
 .deadline-wrap
-	animation: slideDown 1s ease 3s
+	animation: deadline 6s ease infinite
 	animation-fill-mode: both
 .button
-	animation: slideUp 1s ease 3s
+	animation: button 6s ease infinite
 	animation-fill-mode: both
 
 @keyframes triangle1
@@ -200,13 +267,13 @@ body
 		transform: rotate3d(-1, 10, -2, 180deg)
 
 .triangle1
-	animation: triangle1 6s linear
+	animation: triangle1 6s linear alternate infinite
 	animation-fill-mode: both
 .triangle2
-	animation: triangle2 6s linear
+	animation: triangle2 6s linear alternate infinite
 	animation-fill-mode: both
 .triangle3
-	animation: triangle3 6s linear
+	animation: triangle3 6s linear alternate infinite
 	animation-fill-mode: both
 
 

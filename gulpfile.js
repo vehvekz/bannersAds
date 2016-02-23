@@ -24,9 +24,9 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/728x90/"
+		baseDir: "dist/320x100/"
 	},
-	tunnel: true,
+	tunnel: false,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "Frontend Work!"
@@ -51,7 +51,7 @@ gulp.task('style', function () {
 			indentedSyntax: true
 		}))
 		.pipe($.autoprefixer({
-			browsers: ['last 2 versions', 'ie >= 9', 'and_chr >= 2.3'],
+			browsers: ['last 10 versions', 'ie >= 9'],
 			cascade: true
 		}))
 		.pipe($.cssnano())

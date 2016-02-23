@@ -2,7 +2,8 @@
 $black: #000
 $white: #fff
 $accent: #65bd60
-$duration: 8s // animation duration
+$bg: #f1f1f1
+$duration: 9s // animation duration
 
 /********** Main Style **********/
 *
@@ -10,14 +11,14 @@ $duration: 8s // animation duration
 .banner
 	position: relative
 	display: block
-	width: 728px
-	height: 90px
+	width: 970px
+	height: 250px
 	overflow: hidden
 	-webkit-font-smoothing: antialised
-	background-color: #f1f1f1
 	font-family: 'Roboto', sans-serif
-	color: $black
 	font-size: 14px
+	color: $black
+	background-color: $bg
 	text-decoration: none
 	outline:none
 	-webkit-font-smoothing: antialised
@@ -31,39 +32,40 @@ $duration: 8s // animation duration
 	font-family: 'Roboto Condensed', sans-serif
 	text-transform: uppercase
 	height: 100%
-	background: url("img/bg1.png") no-repeat center
+	background: url("img/bg1.png") no-repeat top center
 .title1
 	position: absolute
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
-	padding-left: 194px
+	padding-left: 110px
+	padding-top: 55px
 	&_text1
-		font-size: 33px
+		font-size: 58px
 		letter-spacing: -2px
-		line-height: 33px
-		padding-top: 9px
+		line-height: 58px
+		padding-top: 6px
 	&_text2
-		font-size: 42px
-		letter-spacing: -3px
-		line-height: 42px
+		font-size: 69px
+		letter-spacing: -2px
+		line-height: 75px
 .title2
 	position: absolute
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
-	padding-left: 194px
+	padding-left: 110px
 	&_text1
-		font-size: 35px
+		font-size: 68px
 		letter-spacing: -2px
-		line-height: 35px
-		padding-top: 8px
+		line-height: 68px
+		padding-top: 52px
 	&_text2
-		font-size: 45px
-		letter-spacing: -3px
-		line-height: 45px
+		font-size: 84px
+		letter-spacing: -2px
+		line-height: 84px
 
 /********** Date **********/
 .info-wrap
@@ -76,45 +78,49 @@ $duration: 8s // animation duration
 	position: absolute
 	top: 0
 	left: 0
-	padding-left: 16px
-	width: 522px
-	height: 90px
+	padding-left: 42px
+	padding-top: 58px
+	width: 970px
+	height: 250px
 	background: url("img/info-bg1.png") no-repeat center
+.deadline-discr
+	font-size: 27px
+	line-height: 27px
 .deadline
 	color: $white
-	font-size: 21px
-	padding: 16px 0 0
-	letter-spacing: 0
-	line-height: 21px
+	font-size: 39px
+	padding: 4px 0 0
+	line-height: 39px
 .date
-	font-size: 46px
-	line-height: 44px
-	letter-spacing: -2px
+	font-size: 67px
+	line-height: 67px
+	letter-spacing: -5px
+	text-transform: uppercase
 
 /********** Logos **********/
 .logos
 	position: absolute
 	top: 0
 	right: 0
-	width: 490px
-	height: 90px
-	background: url("img/info-bg2.png") no-repeat center
-	padding-left: 340px
+	width: 626px
+	height: 250px
+	background: url("img/info-bg2.png") no-repeat top center
+	padding-left: 356px
 	img
-		display: inline-block
+		display: block
 		&.logo1
-			width: 98px
-			margin-top: 6px
+			width: 168px
+			margin-top: 50px
 		&.logo2
-			margin: 4px 0 0 3px
-			width: 144px
+			margin: 28px 0 0 17px
+			width: 220px
 
 /********** Elements **********/
 .triangle2
 	position: absolute
 	width: 41px
 	height: 28px
-	top: 50px
+	top: 42px
 	background: url("img/triangle2.png") no-repeat center
 .triangle3
 	position: absolute
@@ -124,75 +130,77 @@ $duration: 8s // animation duration
 .bg2
 	position: absolute
 	bottom: 0
-	right: 79px
-	width: 168px
-	height: 74px
+	right: 0px
+	width: 339px
+	height: 168px
 	background: url("img/bg2.png") no-repeat center
 
 /********** Animation **********/
 @keyframes title1_text1
 	0%
-		transform: translateY(-70px)
+		transform: translateY(-150px)
 	10%
 		transform: translateY(0)
 	25%
 		transform: translateY(0)
 	40%
-		transform: translateY(-70px)
+		transform: translateY(-150px)
 	100%
-		transform: translateY(-70px)
+		transform: translateY(-150px)
 
 @keyframes title1_text2
 	0%
-		transform: translateY(70px)
+		transform: translateY(150px)
 	10%
 		transform: translateY(0)
 	25%
 		transform: translateY(0)
 	40%
-		transform: translateY(70px)
+		transform: translateY(150px)
 	100%
-		transform: translateY(70px)
+		transform: translateY(150px)
 
 @keyframes title2_text1
 	0%
-		transform: translateY(-70px)
-	30%
-		transform: translateY(-70px)
-	40%
+		transform: translateY(-150px)
+	35%
+		transform: translateY(-150px)
+	45%
 		transform: translateY(0)
 	55%
 		transform: translateY(0)
 	70%
-		transform: translateY(-70px)
+		transform: translateY(-150px)
 	100%
-		transform: translateY(-70px)
+		transform: translateY(-150px)
 
 @keyframes title2_text2
 	0%
-		transform: translateY(70px)
-	30%
-		transform: translateY(70px)
-	40%
+		transform: translateY(150px)
+	35%
+		transform: translateY(150px)
+	45%
 		transform: translateY(0)
 	55%
 		transform: translateY(0)
 	70%
-		transform: translateY(70px)
+		transform: translateY(150px)
 	100%
-		transform: translateY(70px)
+		transform: translateY(150px)
 
 @keyframes bg2
 	0%
-		bottom: -40px
-	30%
-		bottom: -40px
-	40%
+		bottom: -150px
+	35%
+		bottom: -150px
+	45%
 		bottom: 0px
-	60%
+	55%
 		bottom: 0px
+	65%
+		bottom: -150px
 	100%
-		bottom: -40px
+		bottom: -150px
 
 @keyframes slideLeft
 	0%
@@ -201,7 +209,7 @@ $duration: 8s // animation duration
 		transform: translateX(100%)
 	65%
 		transform: translateX(0%)
-	85%
+	90%
 		transform: translateX(0%)
 	100%
 		transform: translateX(100%)
@@ -212,7 +220,7 @@ $duration: 8s // animation duration
 		transform: translateX(-100%)
 	65%
 		transform: translateX(0%)
-	85%
+	90%
 		transform: translateX(0%)
 	100%
 		transform: translateX(-100%)
@@ -242,10 +250,10 @@ $duration: 8s // animation duration
 
 @keyframes triangle2
 	from
-		left: 120px
+		left: 70px
 		transform: rotate(0deg)
 	to
-		left: 140px
+		left: 90px
 		transform: rotate(40deg)
 @keyframes triangle3
 	0%

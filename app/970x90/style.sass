@@ -2,7 +2,8 @@
 $black: #000
 $white: #fff
 $accent: #65bd60
-$duration: 8s // animation duration
+$bg: #f1f1f1
+$duration: 12s // animation duration
 
 /********** Main Style **********/
 *
@@ -10,11 +11,11 @@ $duration: 8s // animation duration
 .banner
 	position: relative
 	display: block
-	width: 728px
+	width: 970px
 	height: 90px
 	overflow: hidden
 	-webkit-font-smoothing: antialised
-	background-color: #f1f1f1
+	background-color: $bg
 	font-family: 'Roboto', sans-serif
 	color: $black
 	font-size: 14px
@@ -31,6 +32,7 @@ $duration: 8s // animation duration
 	font-family: 'Roboto Condensed', sans-serif
 	text-transform: uppercase
 	height: 100%
+	width: 100%
 	background: url("img/bg1.png") no-repeat center
 .title1
 	position: absolute
@@ -38,23 +40,43 @@ $duration: 8s // animation duration
 	bottom: 0
 	left: 0
 	right: 0
-	padding-left: 194px
+	font-size: 0px
 	&_text1
-		font-size: 33px
-		letter-spacing: -2px
-		line-height: 33px
-		padding-top: 9px
+		display: inline-block
+		width: 50%
+		height: 100%
+		font-size: 40px
+		letter-spacing: -1px
+		line-height: 40px
+		text-align: right
+		overflow: hidden
+		padding-top: 27px
+		span
+			height: 40px
+			display: block
+			white-space: nowrap
 	&_text2
-		font-size: 42px
-		letter-spacing: -3px
-		line-height: 42px
+		display: inline-block
+		width: 50%
+		height: 100%
+		font-size: 40px
+		letter-spacing: -1px
+		line-height: 40px
+		padding-left: 5px
+		color: $white
+		overflow: hidden
+		padding-top: 27px
+		span
+			height: 40px
+			display: block
+			white-space: nowrap
 .title2
 	position: absolute
 	top: 0
 	bottom: 0
 	left: 0
 	right: 0
-	padding-left: 194px
+	padding-left: 540px
 	&_text1
 		font-size: 35px
 		letter-spacing: -2px
@@ -72,14 +94,14 @@ $duration: 8s // animation duration
 	bottom: 0
 	left: 0
 	right: 0
+	background: $bg url("img/bg2.png") no-repeat left center
 .deadline-wrap
 	position: absolute
 	top: 0
 	left: 0
-	padding-left: 16px
-	width: 522px
+	padding-left: 50px
+	width: 450px
 	height: 90px
-	background: url("img/info-bg1.png") no-repeat center
 .deadline
 	color: $white
 	font-size: 21px
@@ -98,72 +120,63 @@ $duration: 8s // animation duration
 	right: 0
 	width: 490px
 	height: 90px
-	background: url("img/info-bg2.png") no-repeat center
-	padding-left: 340px
+	padding-left: 148px
 	img
 		display: inline-block
 		&.logo1
-			width: 98px
-			margin-top: 6px
+			width: 120px
+			margin: 22px 28px 0 0
 		&.logo2
-			margin: 4px 0 0 3px
-			width: 144px
+			width: 178px
 
 /********** Elements **********/
 .triangle2
 	position: absolute
-	width: 41px
-	height: 28px
-	top: 50px
+	width: 69px
+	height: 48px
+	bottom: 0px
 	background: url("img/triangle2.png") no-repeat center
 .triangle3
 	position: absolute
-	width: 30px
-	height: 20px
+	width: 43px
+	height: 35px
 	background: url("img/triangle3.png") no-repeat center
-.bg2
-	position: absolute
-	bottom: 0
-	right: 79px
-	width: 168px
-	height: 74px
-	background: url("img/bg2.png") no-repeat center
 
 /********** Animation **********/
 @keyframes title1_text1
 	0%
-		transform: translateY(-70px)
-	10%
-		transform: translateY(0)
+		transform: translateX(500px)
+	5%
+		transform: translateX(0px)
+	20%
+		transform: translateX(0px)
 	25%
-		transform: translateY(0)
-	40%
-		transform: translateY(-70px)
+		transform: translateX(500px)
 	100%
-		transform: translateY(-70px)
+		transform: translateX(500px)
 
 @keyframes title1_text2
 	0%
-		transform: translateY(70px)
-	10%
-		transform: translateY(0)
+		transform: translateX(-500px)
+	5%
+		transform: translateX(0px)
+	20%
+		transform: translateX(0px)
 	25%
-		transform: translateY(0)
-	40%
-		transform: translateY(70px)
+		transform: translateX(-500px)
 	100%
-		transform: translateY(70px)
+		transform: translateX(-500px)
 
 @keyframes title2_text1
 	0%
 		transform: translateY(-70px)
-	30%
+	25%
 		transform: translateY(-70px)
-	40%
+	30%
+		transform: translateY(0)
+	50%
 		transform: translateY(0)
 	55%
-		transform: translateY(0)
-	70%
 		transform: translateY(-70px)
 	100%
 		transform: translateY(-70px)
@@ -171,57 +184,63 @@ $duration: 8s // animation duration
 @keyframes title2_text2
 	0%
 		transform: translateY(70px)
-	30%
+	25%
 		transform: translateY(70px)
-	40%
+	30%
+		transform: translateY(0)
+	50%
 		transform: translateY(0)
 	55%
-		transform: translateY(0)
-	70%
 		transform: translateY(70px)
 	100%
 		transform: translateY(70px)
 
-@keyframes bg2
+@keyframes infoWrap
 	0%
-		bottom: -40px
-	30%
-		bottom: -40px
-	40%
-		bottom: 0px
+		transform: translateX(-100%)
+	50%
+		transform: translateX(-100%)
+	55%
+		transform: translateX(0%)
+	95%
+		transform: translateX(0%)
+	100%
+		transform: translateX(-100%)
+
+@keyframes deadline
+	0%
+		transform: translateY(100px)
+	53%
+		transform: translateY(100px)
 	60%
-		bottom: 0px
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	95%
+		transform: translateY(-100px)
 	100%
-		bottom: -40px
+		transform: translateY(-100px)
 
-@keyframes slideLeft
+@keyframes logos
 	0%
-		transform: translateX(100%)
-	55%
-		transform: translateX(100%)
-	65%
-		transform: translateX(0%)
-	85%
-		transform: translateX(0%)
+		transform: translateY(-100px)
+	53%
+		transform: translateY(-100px)
+	60%
+		transform: translateY(0)
+	90%
+		transform: translateY(0)
+	95%
+		transform: translateY(100px)
 	100%
-		transform: translateX(100%)
-@keyframes slideRight
-	0%
-		transform: translateX(-100%)
-	55%
-		transform: translateX(-100%)
-	65%
-		transform: translateX(0%)
-	85%
-		transform: translateX(0%)
-	100%
-		transform: translateX(-100%)
+		transform: translateY(100px)
 
-.title1_text1
-	animation: title1_text1 $duration ease infinite
+
+.title1_text1 span
+	animation: title1_text1 $duration linear infinite
 	animation-fill-mode: both
-.title1_text2
-	animation: title1_text2 $duration ease infinite
+.title1_text2 span
+	animation: title1_text2 $duration linear infinite
 	animation-fill-mode: both
 
 .title2_text1
@@ -230,19 +249,19 @@ $duration: 8s // animation duration
 .title2_text2
 	animation: title2_text2 $duration ease infinite
 	animation-fill-mode: both
-.bg2
-	animation: bg2 $duration ease infinite
-	animation-fill-mode: both
+
+.info-wrap
+	animation: infoWrap $duration ease infinite
 
 .deadline-wrap
-	animation: slideRight $duration ease-in-out infinite
+	animation: deadline $duration ease infinite
 .logos
-	animation: slideLeft $duration ease-in-out infinite
+	animation: logos $duration ease infinite
 	animation-fill-mode: both
 
 @keyframes triangle2
 	from
-		left: 120px
+		left: 100px
 		transform: rotate(0deg)
 	to
 		left: 140px
@@ -250,13 +269,12 @@ $duration: 8s // animation duration
 @keyframes triangle3
 	0%
 		bottom: 30px
-		right: 30px
-	50%
-		right: 10px
+		left: 250px
+		transform: rotate(0deg)
 	100%
-		bottom: 50px
-		right: 20px
-		transform: rotate3d(-1, 10, -2, 180deg)
+		bottom: 40px
+		left: 350px
+		transform: rotate(40deg)
 
 .triangle2
 	animation: triangle2 $duration linear alternate infinite

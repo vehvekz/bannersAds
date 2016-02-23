@@ -1,0 +1,225 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #65bd60
+$bg: #f1f1f1
+$duration: 9s // animation duration
+
+/********** Main Style **********/
+*
+	box-sizing: border-box
+.banner
+	position: relative
+	display: block
+	width: 320px
+	height: 100px
+	overflow: hidden
+	-webkit-font-smoothing: antialised
+	font-family: 'Roboto', sans-serif
+	font-size: 14px
+	background: url("img/bg1.png") no-repeat center
+	color: $black
+	background-color: $bg
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialised
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.title-wrap
+	font-family: 'Roboto Condensed', sans-serif
+	text-transform: uppercase
+	height: 100%
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-left: 12px
+	&_text1
+		font-size: 26px
+		letter-spacing: -2px
+		line-height: 26px
+		padding-top: 24px
+	&_text2
+		font-size: 29px
+		letter-spacing: -2px
+		line-height: 29px
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	padding-left: 12px
+	&_text1
+		font-size: 29px
+		letter-spacing: -2px
+		line-height: 29px
+		padding-top: 20px
+	&_text2
+		font-size: 36px
+		letter-spacing: -2px
+		line-height: 36px
+
+/********** Date **********/
+.info-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+.deadline-wrap
+	position: absolute
+	top: 0
+	left: 0
+	padding-left: 12px
+	width: 414px
+	height: 60px
+.deadline
+	font-size: 18px
+	padding: 29px 0 0
+	letter-spacing: 0
+	line-height: 18px
+.date
+	font-size: 34px
+	line-height: 34px
+	letter-spacing: -3px
+
+/********** Logos **********/
+.logos
+	position: absolute
+	top: 0
+	right: 0
+	width: 299px
+	height: 60px
+	padding-left: 205px
+	img
+		display: inline-block
+		&.logo1
+			width: 83px
+			margin-top: 47px
+
+/********** Elements **********/
+.triangle2
+	position: absolute
+	width: 41px
+	height: 28px
+	bottom: 10px
+	background: url("img/triangle2.png") no-repeat center
+.triangle3
+	position: absolute
+	width: 30px
+	height: 20px
+	background: url("img/triangle3.png") no-repeat center
+
+/********** Animation **********/
+@keyframes title1
+	0%
+		transform: translateY(-100px)
+	10%
+		transform: translateY(0)
+	25%
+		transform: translateY(0)
+	40%
+		transform: translateY(-100px)
+	100%
+		transform: translateY(-100px)
+
+@keyframes title2
+	0%
+		transform: translateX(350px)
+	30%
+		transform: translateX(350px)
+	40%
+		transform: translateX(0)
+	55%
+		transform: translateX(0)
+	70%
+		transform: translateX(350px)
+	100%
+		transform: translateX(350px)
+
+@keyframes logos
+	0%
+		transform: translateX(100%)
+	55%
+		transform: translateX(100%)
+	65%
+		transform: translateX(0%)
+	85%
+		transform: translateX(0%)
+	100%
+		transform: translateX(100%)
+@keyframes deadline
+	0%
+		transform: translateY(-100px)
+	55%
+		transform: translateY(-100px)
+	65%
+		transform: translateY(0px)
+	85%
+		transform: translateY(0px)
+	100%
+		transform: translateY(-100px)
+@keyframes date
+	0%
+		transform: translateX(-250px)
+	55%
+		transform: translateX(-250px)
+	65%
+		transform: translateX(0px)
+	85%
+		transform: translateX(0px)
+	100%
+		transform: translateX(-250px)
+
+.title1
+	animation: title1 $duration ease infinite
+	animation-fill-mode: both
+.title2
+	animation: title2 $duration ease infinite
+	animation-fill-mode: both
+
+.deadline
+	animation: deadline $duration ease-in-out infinite
+.date
+	animation: date $duration ease-in-out infinite
+.logos
+	animation: logos $duration ease-in-out infinite
+	animation-fill-mode: both
+
+@keyframes triangle2
+	from
+		left: 10px
+		transform: rotate(0deg)
+	to
+		left: 50px
+		transform: rotate(40deg)
+@keyframes triangle3
+	0%
+		bottom: 30px
+		right: 30px
+	50%
+		right: 10px
+	100%
+		bottom: 50px
+		right: 20px
+		transform: rotate3d(-1, 10, -2, 180deg)
+
+.triangle2
+	animation: triangle2 $duration linear alternate infinite
+	animation-fill-mode: both
+.triangle3
+	animation: triangle3 $duration linear alternate infinite
+	animation-fill-mode: both
+
+
+
+
+
+
