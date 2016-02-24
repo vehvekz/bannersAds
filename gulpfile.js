@@ -24,12 +24,11 @@ var path = {
 // Настройки dev сервера
 var config = {
 	server: {
-		baseDir: "dist/250x360/"
+		baseDir: "dist/320x50/"
 	},
 	tunnel: false,
 	host: 'localhost',
-	port: 9000,
-	logPrefix: "Frontend Work!"
+	port: 3000
 };
 
 // HTML build
