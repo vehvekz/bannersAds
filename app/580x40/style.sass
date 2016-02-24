@@ -1,0 +1,263 @@
+/********** Vars **********/
+$black: #000
+$white: #fff
+$accent: #65bd60
+$bg: #f1f1f1
+$duration: 11s // animation duration
+
+/********** Main Style **********/
+*
+	box-sizing: border-box
+.banner
+	position: relative
+	display: block
+	width: 580px
+	height: 40px
+	overflow: hidden
+	-webkit-font-smoothing: antialised
+	background-color: $bg
+	font-family: 'Roboto', sans-serif
+	color: $black
+	font-size: 14px
+	text-decoration: none
+	outline:none
+	-webkit-font-smoothing: antialised
+	&:hover, &:focus, &:active
+		color: $black
+		text-decoration: none
+		outline:none
+
+/********** Title text **********/
+.title-wrap
+	font-family: 'Roboto Condensed', sans-serif
+	text-transform: uppercase
+	height: 100%
+	width: 100%
+	background: url("img/bg1.png") no-repeat center
+.title1
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	font-size: 0px
+	&_text1
+		display: inline-block
+		width: 50%
+		height: 100%
+		font-size: 25px
+		letter-spacing: -1px
+		line-height: 40px
+		text-align: right
+		overflow: hidden
+		span
+			height: 40px
+			display: block
+			white-space: nowrap
+	&_text2
+		display: inline-block
+		width: 50%
+		height: 100%
+		font-size: 25px
+		letter-spacing: -1px
+		line-height: 40px
+		padding-left: 5px
+		color: $white
+		overflow: hidden
+		span
+			height: 40px
+			display: block
+			white-space: nowrap
+.title2
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	text-align: center
+	font-size: 26px
+	letter-spacing: -1px
+	line-height: 40px
+
+/********** Date **********/
+.info-wrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	background: $bg url("img/bg2.png") no-repeat left center
+.deadline-wrap
+	position: absolute
+	top: 0
+	left: 0
+	padding-left: 14px
+	line-height: 40px
+	width: 580px
+	height: 40px
+	.deadline
+		font-size: 18px
+		display: inline-block
+		vertical-align: middle
+	span
+		font-size: 22px
+		letter-spacing: -1px
+		text-transform: uppercase
+		padding-left: 4px
+		display: inline-block
+		vertical-align: middle
+
+/********** Logos **********/
+.logos
+	position: absolute
+	top: 0
+	right: 0
+	width: 580px
+	height: 40px
+	padding-left: 485px
+	img
+		display: inline-block
+		&.logo1
+			width: 81px
+			margin-top: 3px
+
+/********** Elements **********/
+.triangle2
+	position: absolute
+	width: 33px
+	height: 24px
+	bottom: 0px
+	background: url("img/triangle2.png") no-repeat center
+	background-size: cover
+.triangle3
+	position: absolute
+	width: 30px
+	height: 24px
+	background: url("img/triangle3.png") no-repeat center
+	background-size: cover
+
+/********** Animation **********/
+@keyframes title1_text1
+	0%
+		transform: translateX(500px)
+	10%
+		transform: translateX(0px)
+	25%
+		transform: translateX(0px)
+	35%
+		transform: translateX(500px)
+	100%
+		transform: translateX(500px)
+
+@keyframes title1_text2
+	0%
+		transform: translateX(-500px)
+	10%
+		transform: translateX(0px)
+	25%
+		transform: translateX(0px)
+	35%
+		transform: translateX(-500px)
+	100%
+		transform: translateX(-500px)
+
+@keyframes title2
+	0%
+		transform: translateY(-70px)
+	28%
+		transform: translateY(-70px)
+	36%
+		transform: translateY(0)
+	59%
+		transform: translateY(0)
+	66%
+		transform: translateY(-70px)
+	100%
+		transform: translateY(-70px)
+
+@keyframes infoWrap
+	0%
+		transform: translateX(-100%)
+	60%
+		transform: translateX(-100%)
+	69%
+		transform: translateX(0%)
+	90%
+		transform: translateX(0%)
+	100%
+		transform: translateX(-100%)
+
+@keyframes deadline
+	0%
+		transform: translateY(100px)
+	60%
+		transform: translateY(100px)
+	70%
+		transform: translateY(0)
+	85%
+		transform: translateY(0)
+	100%
+		transform: translateY(-100px)
+
+@keyframes logos
+	0%
+		transform: translateY(-100px)
+	60%
+		transform: translateY(-100px)
+	70%
+		transform: translateY(0)
+	85%
+		transform: translateY(0)
+	100%
+		transform: translateY(100px)
+
+
+.title1_text1 span
+	animation: title1_text1 $duration linear infinite
+	animation-fill-mode: both
+.title1_text2 span
+	animation: title1_text2 $duration linear infinite
+	animation-fill-mode: both
+
+.title2
+	animation: title2 $duration ease infinite
+	animation-fill-mode: both
+
+.info-wrap
+	animation: infoWrap $duration ease infinite
+
+.deadline-wrap
+	animation: deadline $duration ease infinite
+.logos
+	animation: logos $duration ease infinite
+	animation-fill-mode: both
+
+@keyframes triangle2
+	from
+		left: 30px
+		transform: rotate(0deg)
+	to
+		left: 70px
+		transform: rotate(40deg)
+@keyframes triangle3
+	0%
+		bottom: -5px
+		left: 130px
+		transform: rotate(0deg)
+	100%
+		bottom: 0px
+		left: 170px
+		transform: rotate(40deg)
+
+.triangle2
+	animation: triangle2 $duration linear alternate infinite
+	animation-fill-mode: both
+.triangle3
+	animation: triangle3 $duration linear alternate infinite
+	animation-fill-mode: both
+
+
+
+
+
+
